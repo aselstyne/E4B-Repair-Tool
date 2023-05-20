@@ -1,4 +1,4 @@
-# Emax II -> E4B Repair Tool
+# Emax II -> Emulator IV Repair Tool
 Tool for repairing sound banks from that were translated from the E-mu Emax II to the Emulator IV.
 
 In the process of translating, many parameters in the banks are incorrectly translated. This software searches for such errors, and seeks to correct them.
