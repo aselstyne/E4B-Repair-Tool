@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Scanner;
 
 import java.util.ArrayList;
@@ -22,8 +23,8 @@ public class E4BRepairUtils {
 	public static boolean EmaxI = false; // True if this is an EmaxI bank, important for chorusing
 
 	private static HashMap<Integer, Integer> loadCSV(String FileName) throws FileNotFoundException {
-		File CSV = new File(".\\CSV\\" + FileName);
-		Scanner sc = new Scanner(CSV);
+		InputStream input = E4BRepairUtils.class.getResourceAsStream("/CSV/" + FileName);
+		Scanner sc = new Scanner(input);
 		HashMap<Integer, Integer> m = new HashMap<>();
 		int key, val = 0;
 		while (sc.hasNext()) {
