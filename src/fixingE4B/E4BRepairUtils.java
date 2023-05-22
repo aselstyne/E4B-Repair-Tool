@@ -330,58 +330,7 @@ public class E4BRepairUtils {
 			// For every exception, the log should still be written
 			writeLog(finalLog, banks);
 			IllegalStateException e2 = new IllegalStateException(e.getMessage() + " Log still written.");
-			//String oldMessage = e.getMessage();
-			//Exception newException = new e.getClass() 
-			//throw new e.getClass()(oldMessage + " Log still written.");
 			throw e2;
 		} 
 	}
-
-//	public static void main(String[] args) throws IOException {
-//		//Create UI
-////		JFrame window = new JFrame("E4B Repair Tool");
-////		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-////		window.setSize(500,500);
-////		JButton start = new JButton("Click here to start");
-////		JButton folder = new JButton("Open Folder");
-////		JPanel buttons = new JPanel();
-////		buttons.add(start);
-////		buttons.add(folder);
-////		window.getContentPane().add(buttons);
-////		window.setVisible(true);
-////		
-////		JFileChooser f = new JFileChooser();
-////        f.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY); 
-////        f.showSaveDialog(null);
-////
-////        System.out.println(f.getCurrentDirectory());
-////        System.out.println(f.getSelectedFile());
-//		// String bankName = "B.000-FLYS ALAN.E4B";
-//		// String dir = "C:\\Users\\Alexa\\Music\\" + folderName + "\\" + bankName;
-//		File[] folderContents = new File("C:\\Users\\Alexa\\Music\\" + folderName).listFiles();
-//		// Remove all non-E4B banks:
-//		ArrayList<File> bankList = new ArrayList<>();
-//		for (int i = 0; i < folderContents.length; i++) {
-//			String bankName = folderContents[i].getName().toUpperCase();
-//			if (bankName.endsWith(".E4B"))
-//				// Add a file to the list if it's an E4B
-//				bankList.add(folderContents[i]);
-//		}
-//		// Create a regular array from the ArrayList
-//		File[] banks = Arrays.copyOf(bankList.toArray(), bankList.size(), File[].class);
-//		System.out.println(banks.length + " banks found in the specified folder.");
-//		// 2D ArrayList used for writing the log when the program exits
-//		ArrayList<ArrayList<String>> finalLog = new ArrayList<>();
-//
-//		try {
-//			for (File b : banks) {
-//				finalLog.add(processBank(b));
-//			}
-//			writeLog(finalLog, banks);
-//		} catch (Exception e) {
-//			// For every exception, the log should still be written
-//			e.printStackTrace();
-//			writeLog(finalLog, banks);
-//		}
-//	}
 }
